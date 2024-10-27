@@ -4,11 +4,23 @@ using System.Windows;
 
 namespace CryptoPlatform
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
+    public partial class App
     {
-    }
+        private Bootstrapper.Bootstrapper _bootstrapper;
 
+        protected override  void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            _bootstrapper = new Bootstrapper.Bootstrapper();
+            MainWindow =  _bootstrapper.Run();
+        }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            _bootstrapper.Dispose();
+
+            base.OnExit(e);
+        }
+    }
 }

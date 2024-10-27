@@ -7,4 +7,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoPlatform.Domain\CryptoPlatform.Domain.csproj" />
+    <ProjectReference Include="..\CryptoPlatform.Infrastructure\CryptoPlatform.Infrastructure.csproj" />
+    <ProjectReference Include="..\CryptoPlatform.ViewModel\CryptoPlatform.ViewModel.csproj" />
+    <ProjectReference Include="..\CryptoPlatform.View\CryptoPlatform.View.csproj" />
+  </ItemGroup>
+
 </Project>

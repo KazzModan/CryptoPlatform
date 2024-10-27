@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace CryptoPlatform.Infrastructure.REST;
 
-public class APIRequestExecutor : IApiRequestExecutor
+public class ApiRequestExecutor : IApiRequestExecutor
 {
     private Uri _baseAddress = new Uri("https://api.coincap.io/v2/");
 
