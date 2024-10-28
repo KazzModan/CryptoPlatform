@@ -8,12 +8,48 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="src\Images\ADA_logo.png" />
+    <None Remove="src\Images\BCH_logo.png" />
+    <None Remove="src\Images\BNB_logo.png" />
+    <None Remove="src\Images\BTC_logo.png" />
+    <None Remove="src\Images\DOGE_logo.png" />
+    <None Remove="src\Images\EOS_logo.png" />
+    <None Remove="src\Images\ETH_logo.png" />
+    <None Remove="src\Images\LTC_logo.png" />
+    <None Remove="src\Images\SOL_logo.png" />
+    <None Remove="src\Images\STETH_logo.png" />
+    <None Remove="src\Images\TRX_logo.png" />
+    <None Remove="src\Images\USDC_logo.png" />
+    <None Remove="src\Images\USDT_logo.png" />
+    <None Remove="src\Images\XLM_logo.png" />
+    <None Remove="src\Images\XRP_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Autofac" Version="8.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CryptoPlatform.Domain\CryptoPlatform.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="src\Images\ADA_logo.png" />
+    <Resource Include="src\Images\BCH_logo.png" />
+    <Resource Include="src\Images\BNB_logo.png" />
+    <Resource Include="src\Images\BTC_logo.png" />
+    <Resource Include="src\Images\DOGE_logo.png" />
+    <Resource Include="src\Images\EOS_logo.png" />
+    <Resource Include="src\Images\ETH_logo.png" />
+    <Resource Include="src\Images\LTC_logo.png" />
+    <Resource Include="src\Images\SOL_logo.png" />
+    <Resource Include="src\Images\STETH_logo.png" />
+    <Resource Include="src\Images\TRX_logo.png" />
+    <Resource Include="src\Images\USDC_logo.png" />
+    <Resource Include="src\Images\USDT_logo.png" />
+    <Resource Include="src\Images\XLM_logo.png" />
+    <Resource Include="src\Images\XRP_logo.png" />
   </ItemGroup>
 
 </Project>

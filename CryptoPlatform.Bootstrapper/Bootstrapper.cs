@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using Autofac;
+using CryptoPlatform.View;
 using CryptoPlatform.ViewModel.MainWindow;
 
 namespace CryptoPlatform.Bootstrapper;
@@ -21,10 +22,9 @@ public class Bootstrapper
     {
         var mainWindowViewModel = _container.Resolve<IMainWindowViewModel>();
 
-        var mainWindow = new MainWindow();
-
-        mainWindow.DataContext = mainWindowViewModel;
         await mainWindowViewModel.LoadDataAsync();
+
+        var mainWindow = new MainWindow(mainWindowViewModel);
 
         mainWindow.Show();
         

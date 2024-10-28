@@ -15,7 +15,7 @@ public class MainWindowViewModel : IMainWindowViewModel
     }
     public async Task LoadDataAsync()
     {
-        var cryptosCollectionResponse = await _apiRequestExecutor.GetAsync<CryptoCollectionResponse>("assets?Limit=10");
+        var cryptosCollectionResponse = await _apiRequestExecutor.GetAsync<CryptoCollectionResponse>("assets?limit=10");
 
         Items = cryptosCollectionResponse.Data.Select(response =>
             new CryptoDTO(response.Symbol, response.Name, response.ChangePercent24Hr, response.PriceUsd)).ToList();
