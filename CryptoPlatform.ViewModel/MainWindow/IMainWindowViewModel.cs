@@ -2,5 +2,5 @@
 
 public interface IMainWindowViewModel
 {
-
+    public Task LoadDataAsync();
 }

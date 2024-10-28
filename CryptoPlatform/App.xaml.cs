@@ -8,12 +8,12 @@ namespace CryptoPlatform
     {
         private Bootstrapper.Bootstrapper _bootstrapper;
 
-        protected override  void OnStartup(StartupEventArgs e)
+        protected override async void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
             _bootstrapper = new Bootstrapper.Bootstrapper();
-            MainWindow =  _bootstrapper.Run();
+            MainWindow = await _bootstrapper.Run();
         }
 
         protected override void OnExit(ExitEventArgs e)

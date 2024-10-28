@@ -17,14 +17,17 @@ public class Bootstrapper
 
         _container = containerBuilder.Build();
     }
-    public Window Run()
+    public async Task<Window> Run()
     {
         var mainWindowViewModel = _container.Resolve<IMainWindowViewModel>();
 
         var mainWindow = new MainWindow();
 
-        mainWindow.Show();
+        mainWindow.DataContext = mainWindowViewModel;
+        await mainWindowViewModel.LoadDataAsync();
 
+        mainWindow.Show();
+        
         if (mainWindow is not Window window)
             throw new NotImplementedException();
 
