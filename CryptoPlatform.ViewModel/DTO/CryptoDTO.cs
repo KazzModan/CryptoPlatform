@@ -1,4 +1,6 @@
-﻿namespace CryptoPlatform.ViewModel.DTO;
+﻿using System.Windows.Media;
+
+namespace CryptoPlatform.ViewModel.DTO;
 
 public class CryptoDTO
 {
@@ -11,6 +13,7 @@ public class CryptoDTO
         ChangePercent24Hr = changePer24Hr.ToString("N2");
         PriceUsd = priceUsd.ToString("N2");
         Source = string.Concat(Path, symbol, "_logo.png");
+        Change24HColor = changePer24Hr > 0 ? Brushes.LimeGreen : Brushes.Red;
     }
 
     public string Symbol { get; set; }
@@ -18,4 +21,5 @@ public class CryptoDTO
     public string ChangePercent24Hr { get; set; }
     public string PriceUsd { get; set; }
     public string Source { get; set; }
+    public Brush Change24HColor { get; set; }
 }
