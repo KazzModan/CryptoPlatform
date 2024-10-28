@@ -10,13 +10,15 @@
         <StackPanel>
             <Grid>
                 <TextBox x:Name="SearchTermTextBox"
+                         Width="300"
                          VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
                          FontSize="14"
                          Padding="25,0,10,0"
-                         Margin="10,5,10,0"
+                         Margin="40,5,10,0"
                          BorderBrush="Black" 
                          BorderThickness="2">
-                <TextBox.Resources>
+                    <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
@@ -25,7 +27,7 @@
                 <TextBlock IsHitTestVisible="False" 
                            Text="Enter Search Term Here" 
                            VerticalAlignment="Center" 
-                           HorizontalAlignment="Left" 
+                           HorizontalAlignment="Center" 
                            Padding="25,0,10,0"
                            Margin="10,5,0,0" 
                            Foreground="DarkGray">
